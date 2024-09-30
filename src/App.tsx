@@ -1,14 +1,6 @@
 import { useState, useMemo } from 'react'
-import Search from './components/Search'
-import UserList from './components/UserList'
-import './App.css'
-
-interface UserProps {
-  id: string
-  name: string
-  email: string
-  avatar?: string
-}
+import { Search, UserList } from './components';
+import { UserProps } from './components/types';
 
 const usersData: UserProps[] = [
   { id: '1', name: 'John Doe', email: 'john@example.com' },
@@ -16,6 +8,9 @@ const usersData: UserProps[] = [
   { id: '3', name: 'Dan Abramov', email: 'dan@example.com' },
   { id: '4', name: 'Daniel Alpert', email: 'daniel@example.com' },
   { id: '5', name: 'Ryan Florence', email: 'ryan@example.com' },
+  { id: '6', name: 'Richard Saint', email: 'richard@example.com' },
+  { id: '7', name: 'Sebas Markbåge', email: 'sebas@example.com' },
+  { id: '8', name: 'Sergio Markbåge', email: 'sergio@example.com' },
 ];
 
 function App() {

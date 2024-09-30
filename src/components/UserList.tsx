@@ -1,16 +1,6 @@
 import { memo } from "react"
 import User from "./User"
-
-interface UserProps {
-    id: string
-    name: string
-    email: string
-    avatar?: string
-}
-
-interface UserListProps {
-    users: UserProps[];
-}
+import { UserListProps } from "./types";
 
 const areEqual = (prevProps: UserListProps, nextProps: UserListProps) => {
     if (prevProps.users.length !== nextProps.users.length) return false;
@@ -21,7 +11,7 @@ const areEqual = (prevProps: UserListProps, nextProps: UserListProps) => {
     );
 };
 
-function UserList({ users }: { users: UserProps[] }) {
+function UserList({ users }: UserListProps) {
     console.log("Componente UserList renderizado")
 
     return (

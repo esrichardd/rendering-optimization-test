@@ -3,6 +3,7 @@ interface SearchProps {
 }
 
 function Search({ onSearch }: SearchProps) {
+    console.log("Componente Search renderizado")
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         onSearch(event.target.value);
     };
